@@ -45,6 +45,7 @@ public class Application {
 
     @PostMapping("/posts") // Создание страницы
     public ResponseEntity<Post> create(@RequestBody Post post) {
+
         posts.add(post);
         return ResponseEntity.status(HttpStatus.CREATED).body(post);
     }
